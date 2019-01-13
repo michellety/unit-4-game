@@ -22,13 +22,16 @@ $(document).ready(function() {
     //create a function to update wins
 
     function winUpdate () {
-
+        //increase the win value
+        wins ++;
+        //change the value on the html
+        $("#wins").text(wins);
     };
 
     //create a function to update losses
 
     function lossUpdate () {
-
+        losses ++;
     };
 
     //create a game reset function 
