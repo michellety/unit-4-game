@@ -32,6 +32,8 @@ $(document).ready(function() {
 
     function lossUpdate () {
         losses ++;
+        //change the value on the html
+        $("#losses").text(losses);
     };
 
     //create a game reset function 
