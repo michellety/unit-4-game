@@ -12,6 +12,36 @@ $(document).ready(function() {
         crystalFour = Math.floor(Math.random() * 12) + 1;
     console.log(crystalOne, crystalTwo, crystalThree, crystalFour);
 
+    //create variables to hold the wins, losses, and total
+    //initialize to 0 for the start of the game  
+
+    var wins = 0,
+        losses = 0,
+        scoreCounter = 0;
+
+    //create a function to update wins
+
+    function winUpdate () {
+
+    };
+
+    //create a function to update losses
+
+    function lossUpdate () {
+
+    };
+
+    //create a game reset function 
+
+    function reset () {
+
+    };
+
+    //compare the crystal value to the random number when clicked
+    //if the total is less than the number, keep playing and counting 
+
+    
+
 
 
 
