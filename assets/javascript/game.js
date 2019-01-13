@@ -4,6 +4,7 @@ $(document).ready(function() {
     //computer generates a random number between 19 and 120
     var randomNum = Math.floor(Math.random() * 102) + 19;
     console.log(randomNum);
+    $("randNumber").text(randomNum);
 
     //each of the 4 crystal also generate a random number, between 1 and 12
     var crystalOne = Math.floor(Math.random() * 12) + 1,
@@ -25,7 +26,8 @@ $(document).ready(function() {
         //increase the win value
         wins ++;
         //change the value on the html
-        $("#wins").text(wins);
+        $("#wins").html("Wins: " + wins);
+      
     };
 
     //create a function to update losses
@@ -33,13 +35,23 @@ $(document).ready(function() {
     function lossUpdate () {
         losses ++;
         //change the value on the html
-        $("#losses").text(losses);
+        $("#losses").html("Losses: " + losses);
+        
     };
 
     //create a game reset function 
     //the game resets the value of the random number and all crystals when win or loss is updated
     function reset () {
+        //computer generates a random number between 19 and 120
+        var randomNum = Math.floor(Math.random() * 102) + 19;
         
+        //each of the 4 crystal also generate a random number, between 1 and 12
+        var crystalOne = Math.floor(Math.random() * 12) + 1,
+        crystalTwo = Math.floor(Math.random() * 12) + 1,
+        crystalThree = Math.floor(Math.random() * 12) + 1,
+        crystalFour = Math.floor(Math.random() * 12) + 1;
+        //reset the scoreCounter
+        scoreCounter = 0;
     };
 
     //onclick function for the game
@@ -50,22 +62,24 @@ $(document).ready(function() {
         //score counter, starting at 0, increases the value of the crystal each time a crystal is clicked 
         scoreCounter += crystalOne; 
         //each click updates the score on the display
-        $("#totalScore").text(scoreCounter);
+        $("#totalScore").html("Your total score: " + scoreCounter);
         //player wins if the score count matches the random number
         if (totalScore === randomNum) {
             //the win display is increased by 1 point
-            winUpdate();
+            win++;
+            $("#wins").html("Wins: " + wins);
+            // winUpdate();
+            // reset();
         } else if (totalScore >= randomNum) {
             //player loses if the score count is greater than the random number 
             //the loss display is increased by 1 point 
-            lossUpdate();
+            // lossUpdate();
+            // reset();
+            losses++;
+            $("#losses").html("Losses: " + losses);
         };
     });
     
-
-
-
-
 });
 
 
