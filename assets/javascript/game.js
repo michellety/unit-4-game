@@ -37,14 +37,30 @@ $(document).ready(function() {
     };
 
     //create a game reset function 
-
+    //the game resets the value of the random number and all crystals when win or loss is updated
     function reset () {
-
+        
     };
 
+    //onclick function for the game
     //compare the crystal value to the random number when clicked
     //if the total is less than the number, keep playing and counting 
 
+    $("#crystalOne").on("click", function(){
+        //score counter, starting at 0, increases the value of the crystal each time a crystal is clicked 
+        scoreCounter += crystalOne; 
+        //each click updates the score on the display
+        $("#totalScore").text(scoreCounter);
+        //player wins if the score count matches the random number
+        if (totalScore === randomNum) {
+            //the win display is increased by 1 point
+            winUpdate();
+        } else if (totalScore >= randomNum) {
+            //player loses if the score count is greater than the random number 
+            //the loss display is increased by 1 point 
+            lossUpdate();
+        };
+    });
     
 
 
@@ -53,10 +69,9 @@ $(document).ready(function() {
 });
 
 
-//score counter, starting at 0, increases the value of the crystal each time a crystal is clicked 
-//each click updates the score on the display
-//player wins if the score count matches the random number
-//the win display is increased by 1 point
-//player loses if the score count is greater than the random number 
-//the loss display is increased by 1 point 
-//the game resets the value of the random number and all crystals when win or loss is updated
+
+
+
+
+
+
