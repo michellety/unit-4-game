@@ -15,46 +15,88 @@
     <div class="container">
         <h1>Crystals Collector!</h1>
 
-        <div class="instructions">
-            <h3>Instructions: </h3>
-            <br>
-            <p>Match your total score to the random number at the top of the page by clicking on the 4 crystals below. </p> 
-            <p>Each crystal has a random value, unknown until you click.</p>
-            <br>   
-            <p>Win the game by matching your total score to the random number; lose if your total score goes over the random number.</p>
-            <br>
-            <p>The values of each crystal change each time the game restarts!</p>
-            <br>
+
+
+        <div class="row">
+            <div class="col">
+                <div class="instructions">
+                    <h3>Instructions: </h3>
+                    <br>
+                    <p>Match your total score to the random number at the top of the page by clicking on the 4 crystals below. </p> 
+                    <p>Each crystal has a random value, unknown until you click.</p>  
+                    <p>Win the game by matching your total score to the random number; lose if your total score goes over the random number.</p>
+                    <p>The values of each crystal change each time the game restarts!</p>
+                    <br>
+                </div>
+            </div> 
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id="randNumber">
+                    <h3>Random number to match: </h3>
+                </div>
+            </div>
+
+            <div class="col">
+                <div id="score">
+                    <p id="wins">Wins: </p>
+                </div>
+            </div>
         </div>
 
-        <div id="randNumber">
-            <h3>Random number to match: </h3>
+        <div class="row">
+            <div class="col">
+                <div class="total">
+                    <header id="totalScore">Your total score is: </header>
+                </div>
+            </div>
+
+            <div class="col">
+                <div id="score">
+                    <p id="losses"> Losses: </p>
+                </div>
+            </div>
         </div>
 
-        <div class="total">
-            <header id="totalScore">Your total score is: </header>
-        </div>
-        
-        <div id="score">
-            <p id="wins">Wins: </p>
-            <p id="losses"> Losses: </p>
-        </div>
-
-        <div class="images">
-            <div id="crystalOne">
-                <img src="assets/images/diamond.jpeg" alt="amethyst picture" width="120" height="120">
+        <div class="row">
+            <div class="col">
+                <div class="images">
+                    <div id="crystalOne">
+                        <img src="assets/images/diamond.jpeg" alt="amethyst picture" width="150" height="150">
+                    </div>
+                </div>
             </div>
-            <div id="crystalTwo">
-                <img src="assets/images/amethyst.png" alt="diamond picture" width="120" height="120">
+            <div class="col">
+                <div class="images">
+                    <div id="crystalTwo">
+                        <img src="assets/images/amethyst.png" alt="diamond picture" width="150" height="150">
+                    </div>
+                </div>
             </div>
-            <div id="crystalThree">
-                <img src="assets/images/emerald.png" alt="emerald picture" width="120" height="120">
+            <div class="col">
+                <div class="images">
+                    <div id="crystalThree">
+                        <img src="assets/images/emerald.png" alt="emerald picture" width="150" height="150">
+                    </div>
+                </div>
             </div>
-            <div id="crystalFour">
-                <img src="assets/images/ruby_small.jpg" alt="ruby picture" width="120" height="120">
+            <div class="col">
+                <div class="images">
+                    <div id="crystalFour">
+                        <img src="assets/images/ruby_small.jpg" alt="ruby picture" width="150" height="150">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+
+        
+
+        
+        
+
+       
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type = "text/javascript" src="assets/javascript/game.js"></script>
