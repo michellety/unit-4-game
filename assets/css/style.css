@@ -1,7 +1,39 @@
-.images {
-    float: left;
+#header {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: cornflowerblue;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.container {
+    font-family: cursive;
 }
 
 .instructions {
     background-color: aqua;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#score {
+    background-color: lightsteelblue;
+    padding: 10px;
+}
+
+#randNumber{
+    background-color: darkseagreen;
+    padding: 20px;
+    margin-bottom: 10px;
+    
+}
+
+#totalScore {
+    background-color: cadetblue;
+    padding: 20px;
+}
+
+.images {
+    margin-top: 10px;
 }
