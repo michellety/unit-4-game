@@ -51,7 +51,7 @@ $(document).ready(function() {
     //the game resets the value of the random number and all crystals when win or loss is updated
     function reset () {
         //computer generates a random number between 19 and 120
-        var randomNum = Math.floor(Math.random() * 102) + 19;
+        randomNum = Math.floor(Math.random() * 102) + 19;
         $("#randNumber").html("Number to match: " + randomNum);
     
         //each of the 4 crystal also generate a random number, between 1 and 12
