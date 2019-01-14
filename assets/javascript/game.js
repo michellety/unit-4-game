@@ -23,9 +23,10 @@ $(document).ready(function() {
         losses = 0,
         scoreCounter = 0;
 
-    //display wins and losses
+    //display wins, losses, and score
     $("#wins").html("Wins: " + wins);
     $("#losses").html("Losses: " + losses);
+    $("#totalScore").html("Your total score is: " + scoreCounter);
 
     //create a function to update wins
 
@@ -54,13 +55,15 @@ $(document).ready(function() {
         $("#randNumber").html("Number to match: " + randomNum);
     
         //each of the 4 crystal also generate a random number, between 1 and 12
-        var crystalOne = Math.floor(Math.random() * 12) + 1,
-            crystalTwo = Math.floor(Math.random() * 12) + 1,
-            crystalThree = Math.floor(Math.random() * 12) + 1,
-            crystalFour = Math.floor(Math.random() * 12) + 1;
+        crystalOne = Math.floor(Math.random() * 12) + 1;
+        crystalTwo = Math.floor(Math.random() * 12) + 1;
+        crystalThree = Math.floor(Math.random() * 12) + 1;
+        crystalFour = Math.floor(Math.random() * 12) + 1;
 
         //reset the scoreCounter
         scoreCounter = 0;
+        $("#totalScore").html("Your total score: 0");
+
     };    
 
     
@@ -143,11 +146,11 @@ $(document).ready(function() {
         //player wins if the score count matches the random number
         if (scoreCounter === randomNum) {
             //the wins display is increased by 1 point
-            winUpdate();
-           //game resets
+            winUpdate();          
+            //game resets
             reset();    
         } else if (scoreCounter > randomNum) {
-            //player loses if the score count is greater than the random number   
+            //player loses if the score count is greater than the random number  
             //the loss display is increased by 1 point
             lossUpdate();
             //game resets
