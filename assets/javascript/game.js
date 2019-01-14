@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     //computer generates a random number between 19 and 120
     var randomNum = Math.floor(Math.random() * 102) + 19;
-    console.log(randomNum);
+    // console.log(randomNum);
     //dispaly the random number 
     $("#randNumber").html("Number to match: " + randomNum);
 
@@ -14,7 +14,7 @@ $(document).ready(function() {
         crystalFour = Math.floor(Math.random() * 12) + 1;
     
     //value of the crystals is hidden on the page, but visable on the console
-    console.log(crystalOne, crystalTwo, crystalThree, crystalFour);
+    // console.log(crystalOne, crystalTwo, crystalThree, crystalFour);
 
     //create variables to hold the wins, losses, and total
     //initialize to 0 for the start of the game  
@@ -65,8 +65,7 @@ $(document).ready(function() {
         $("#totalScore").html("Your total score: 0");
 
     };    
-
-    
+ 
     //compare the crystal value to the random number when clicked
     //if the total is less than the number, keep playing and counting 
 
